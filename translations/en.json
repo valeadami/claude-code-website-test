@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "At Vale's",
+    "lang": "en"
+  },
+  "header": {
+    "logo": "At Vale's"
+  },
+  "hero": {
+    "title": "Welcome to my website",
+    "description": "This is my first website created with HTML and CSS. A simple and elegant project to learn the basics of modern web development and responsive design.",
+    "cta": "Learn more"
+  },
+  "footer": {
+    "copyright": "© 2025 Website created by Claude Code."
+  }
+}
