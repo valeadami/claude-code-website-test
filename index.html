@@ -10,7 +10,11 @@
     <!-- Header con navigazione -->
     <header class="header">
         <div class="container">
-            <h1 class="logo">At Vale's</h1>
+            <h1 class="logo" data-i18n="header.logo">At Vale's</h1>
+            <div class="language-switcher">
+                <button data-lang="it" class="lang-btn active">IT</button>
+                <button data-lang="en" class="lang-btn">EN</button>
+            </div>
         </div>
     </header>
 
@@ -19,14 +23,13 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h2 class="hero-title">Ti do il benvenuto nel mio sito web</h2>
-                    <p class="hero-description">
+                    <h2 class="hero-title" data-i18n="hero.title">Ti do il benvenuto nel mio sito web</h2>
+                    <p class="hero-description" data-i18n="hero.description">
                         Questo è il mio primo sito web creato con HTML e CSS. 
                         Un progetto semplice ed elegante per imparare le basi 
                         dello sviluppo web moderno e responsive design.
-
                     </p>
-                    <a href="#" class="cta-button">Scopri di più</a>
+                    <a href="#" class="cta-button" data-i18n="hero.cta">Scopri di più</a>
                 </div>
             </div>
         </section>
@@ -35,8 +38,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="copyright">© 2025 Sito realizzato da Claude Code.</p>
+            <p class="copyright" data-i18n="footer.copyright">© 2025 Sito realizzato da Claude Code.</p>
         </div>
     </footer>
+    <script src="js/i18n.js"></script>
 </body>
 </html>

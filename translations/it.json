@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "At Vale's",
+    "lang": "it"
+  },
+  "header": {
+    "logo": "At Vale's"
+  },
+  "hero": {
+    "title": "Ti do il benvenuto nel mio sito web",
+    "description": "Questo è il mio primo sito web creato con HTML e CSS. Un progetto semplice ed elegante per imparare le basi dello sviluppo web moderno e responsive design.",
+    "cta": "Scopri di più"
+  },
+  "footer": {
+    "copyright": "© 2025 Sito realizzato da Claude Code."
+  }
+}
