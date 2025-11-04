@@ -1,0 +1,125 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Vale's Data API",
+    "description": "API per leggere e modificare dati fake su Render",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://YOUR-RENDER-SERVICE.onrender.com",
+      "description": "Server di produzione su Render"
+    }
+  ],
+  "paths": {
+    "/api/data": {
+      "get": {
+        "operationId": "getData",
+        "summary": "Ottieni tutti i dati",
+        "description": "Restituisce la lista completa dei dati disponibili",
+        "responses": {
+          "200": {
+            "description": "Lista dei dati recuperata con successo",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DataItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createData",
+        "summary": "Crea o modifica dati",
+        "description": "Crea un nuovo elemento o modifica uno esistente",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataItem"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Dato creato o modificato con successo",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/data/{id}": {
+      "get": {
+        "operationId": "getDataById",
+        "summary": "Ottieni un dato specifico per ID",
+        "description": "Restituisce un singolo elemento identificato dall'ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID univoco dell'elemento"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Dato trovato",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataItem"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Dato non trovato"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DataItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID univoco dell'elemento"
+          },
+          "name": {
+            "type": "string",
+            "description": "Nome dell'elemento"
+          },
+          "value": {
+            "type": "string",
+            "description": "Valore associato all'elemento"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Data di creazione"
+          }
+        },
+        "required": ["name", "value"]
+      }
+    }
+  }
+}
