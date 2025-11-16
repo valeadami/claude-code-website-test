@@ -169,3 +169,6 @@ pip-delete-this-directory.txt
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# Generated OpenAPI schema
+openapi_schema.json

@@ -1,0 +1,10 @@
+# Configurazione Replit per il deployment
+run = "python api_server.py"
+language = "python3"
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+run = ["sh", "-c", "python api_server.py"]
+deploymentTarget = "cloudrun"
