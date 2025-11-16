@@ -1,0 +1,13 @@
+# Dipendenze per il progetto API Python
+
+# Client ufficiale OpenAI (supporta le API aggiornate a marzo 2025)
+openai>=1.58.1
+
+# Client ufficiale Anthropic per Claude
+anthropic>=0.40.0
+
+# Gestione variabili d'ambiente
+python-dotenv>=1.0.0
+
+# Opzionale: per formattazione output
+rich>=13.9.4
