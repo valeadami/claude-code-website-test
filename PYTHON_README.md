@@ -2,6 +2,14 @@
 
 Progetto per imparare e sperimentare con le API di OpenAI e Claude (Anthropic), con supporto per parametri di pensiero (thinking) e streaming.
 
+## 🎯 Funzionalità
+
+✅ **Client Python** per OpenAI e Claude (con thinking e streaming)
+✅ **API Server REST** per esporre funzionalità AI via HTTP
+✅ **Custom GPT Actions** - Estendi ChatGPT con le tue API
+
+**Nuovo!** 🚀 Puoi creare un Custom GPT che chiama sia OpenAI che Claude. Vedi [CUSTOM_GPT_SETUP.md](CUSTOM_GPT_SETUP.md) per la guida completa.
+
 ## Setup Iniziale
 
 ### 1. Installazione Dipendenze
@@ -209,13 +217,54 @@ python api_client.py
 3. Usa Pylance per type checking e autocompletamento
 4. Configura un virtual environment per isolare le dipendenze
 
+## 🌐 API Server e Custom GPT
+
+### Avviare l'API Server
+
+Il progetto include un server REST FastAPI che espone le funzionalità AI:
+
+```bash
+python api_server.py
+```
+
+Il server sarà disponibile su `http://localhost:8000`
+
+Endpoint disponibili:
+- `POST /openai/chat` - Chiama OpenAI GPT
+- `POST /claude/chat` - Chiama Claude
+- `POST /compare` - Confronta entrambi i modelli
+- `GET /docs` - Documentazione interattiva
+
+### Testare l'API Server
+
+```bash
+# Testa tutti gli endpoint
+python test_api_server.py
+```
+
+### Creare un Custom GPT
+
+Puoi creare un Custom GPT in ChatGPT che usa queste API!
+
+📖 **Guida completa:** [CUSTOM_GPT_SETUP.md](CUSTOM_GPT_SETUP.md)
+
+Passi principali:
+1. Genera lo schema OpenAPI: `python generate_openapi_schema.py`
+2. Deploya il server su un URL pubblico (Ngrok, Replit, Railway, ecc.)
+3. Crea il Custom GPT in ChatGPT
+4. Importa lo schema OpenAPI nelle Actions
+5. Configura l'autenticazione
+
+Il tuo Custom GPT potrà chiamare sia OpenAI che Claude e confrontare le risposte!
+
 ## Prossimi Passi
 
 1. Sperimenta con diversi modelli e parametri
 2. Prova conversazioni multi-turno (aggiungi messaggi alla lista)
 3. Esplora le funzionalità di vision (GPT-4o supporta immagini)
 4. Implementa tool/function calling per estendere le capacità dei modelli
-5. Crea applicazioni più complesse combinando le API
+5. **Crea il tuo Custom GPT con Actions** (vedi [CUSTOM_GPT_SETUP.md](CUSTOM_GPT_SETUP.md))
+6. Crea applicazioni più complesse combinando le API
 
 ## Risorse Utili
 
