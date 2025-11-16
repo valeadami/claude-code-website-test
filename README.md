@@ -30,22 +30,30 @@ cp .env.example .env
 ### 2. Testa il client Python
 
 ```bash
-python api_client.py
+python core/api_client.py
 ```
 
-### 3. Avvia l'API server
+### 3. Prova un esempio
 
+**Esempio 1: Customer Care Bot** (chatbot assistenza clienti)
 ```bash
-python api_server.py
-# Server disponibile su http://localhost:8000
-# Documentazione: http://localhost:8000/docs
+python examples/customer_care/server.py
+# Test: python examples/customer_care/test.py
+```
+
+**Esempio 2: OpenAI vs Claude** (confronto modelli)
+```bash
+python examples/openai_claude/server.py
+# Test: python examples/openai_claude/test.py
 ```
 
 ### 4. Crea il Custom GPT
 
-📖 **Guida rapida:** [QUICKSTART.md](QUICKSTART.md)
-📖 **Guida completa:** [CUSTOM_GPT_SETUP.md](CUSTOM_GPT_SETUP.md)
-📖 **Opzioni di deployment:** [DEPLOYMENT.md](DEPLOYMENT.md)
+📖 **Guida rapida:** [docs/QUICKSTART.md](docs/QUICKSTART.md)
+📖 **Guida completa:** [docs/CUSTOM_GPT_SETUP.md](docs/CUSTOM_GPT_SETUP.md)
+📖 **Opzioni di deployment:** [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)
+
+---
 
 ## 📚 Documentazione
 
@@ -53,28 +61,48 @@ python api_server.py
 
 | Documento | Descrizione |
 |-----------|-------------|
-| [QUICKSTART.md](QUICKSTART.md) | Setup rapido in 5-10 minuti |
-| [PYTHON_README.md](PYTHON_README.md) | Uso del client Python per OpenAI e Claude |
-| [CUSTOM_GPT_SETUP.md](CUSTOM_GPT_SETUP.md) | Guida completa per Custom GPT Actions |
-| [DEPLOYMENT.md](DEPLOYMENT.md) | Come fare il deploy (Ngrok, Replit, Railway, Render) |
+| [docs/QUICKSTART.md](docs/QUICKSTART.md) | Setup rapido in 5-10 minuti |
+| [docs/PYTHON_README.md](docs/PYTHON_README.md) | Uso del client Python per OpenAI e Claude |
+| [docs/CUSTOM_GPT_SETUP.md](docs/CUSTOM_GPT_SETUP.md) | Guida completa per Custom GPT Actions |
+| [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) | Come fare il deploy (Ngrok, Replit, Railway, Render) |
 
-### 🛍️ Esempio Pratico: Customer Care Bot
+### 🎯 Esempi Pratici
 
-Un esempio completo di chatbot per assistenza clienti:
+#### 🛍️ Customer Care Bot
 
-| Documento | Descrizione |
-|-----------|-------------|
-| [CUSTOMER_CARE_README.md](CUSTOMER_CARE_README.md) | Overview esempio customer care |
-| [CUSTOMER_CARE_GPT_SETUP.md](CUSTOMER_CARE_GPT_SETUP.md) | Setup Custom GPT per customer care |
-| `customer_care_server.py` | Server API con 8 ordini mockup |
-| `customer_care_knowledge_base.md` | KB con FAQ e politiche aziendali |
-| `test_customer_care.py` | Test suite interattiva |
+Un chatbot completo per assistenza clienti con Knowledge Base e API per stato ordini.
 
-**Quick Start Customer Care:**
+| File | Descrizione |
+|------|-------------|
+| [examples/customer_care/README.md](examples/customer_care/README.md) | Overview e guida |
+| [examples/customer_care/SETUP.md](examples/customer_care/SETUP.md) | Setup Custom GPT step-by-step |
+| `examples/customer_care/server.py` | Server API con 8 ordini mockup |
+| `examples/customer_care/knowledge_base.md` | KB con FAQ e politiche |
+| `examples/customer_care/test.py` | Test suite interattiva |
+
+**Quick Start:**
 ```bash
-python customer_care_server.py        # Avvia server
-python test_customer_care.py          # Testa (menu interattivo)
+python examples/customer_care/server.py
+python examples/customer_care/test.py
 ```
+
+#### 🤖 OpenAI vs Claude
+
+Confronta le risposte di OpenAI e Claude sullo stesso prompt.
+
+| File | Descrizione |
+|------|-------------|
+| [examples/openai_claude/README.md](examples/openai_claude/README.md) | Overview e guida |
+| `examples/openai_claude/server.py` | Server API multi-model |
+| `examples/openai_claude/test.py` | Test suite |
+
+**Quick Start:**
+```bash
+python examples/openai_claude/server.py
+python examples/openai_claude/test.py
+```
+
+---
 
 ## 🌟 Funzionalità
 
@@ -98,12 +126,14 @@ python test_customer_care.py          # Testa (menu interattivo)
 - ✅ Esempi di prompt e workflow
 - ✅ Guide per deployment cloud
 
+---
+
 ## 🎮 Esempi d'uso
 
 ### Client Python
 
 ```python
-from api_client import OpenAIClient, ClaudeClient
+from core.api_client import OpenAIClient, ClaudeClient
 
 # OpenAI
 client = OpenAIClient()
@@ -148,6 +178,8 @@ Usa Claude con thinking per risolvere questo problema matematico complesso
 Confronta come OpenAI e Claude spiegano il machine learning
 ```
 
+---
+
 ## 🌐 Deployment
 
 Il progetto include configurazioni pronte per:
@@ -157,7 +189,9 @@ Il progetto include configurazioni pronte per:
 - **Railway** ($5/mese, produzione)
 - **Render** (gratuito, con limitazioni)
 
-Vedi [DEPLOYMENT.md](DEPLOYMENT.md) per le guide dettagliate.
+Vedi [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) per le guide dettagliate.
+
+---
 
 ## 📋 Requisiti
 
@@ -166,30 +200,66 @@ Vedi [DEPLOYMENT.md](DEPLOYMENT.md) per le guide dettagliate.
 - Account Anthropic con API key
 - (Opzionale) Account ChatGPT Plus per Custom GPT
 
+---
+
 ## 🔧 Struttura Progetto
 
 ```
 .
-├── api_client.py              # Client Python per OpenAI/Claude
-├── api_server.py              # Server FastAPI con endpoint REST
-├── examples.py                # Esempi d'uso del client
-├── test_api_server.py         # Test suite per l'API
-├── generate_openapi_schema.py # Genera schema per Custom GPT
-├── requirements.txt           # Dipendenze Python
-├── .env.example              # Template variabili d'ambiente
-├── QUICKSTART.md             # Guida rapida
-├── PYTHON_README.md          # Documentazione client Python
-├── CUSTOM_GPT_SETUP.md       # Guida Custom GPT completa
-└── DEPLOYMENT.md             # Guide deployment
+├── examples/                    # Esempi Custom GPT
+│   ├── customer_care/          # 🛍️ Chatbot assistenza clienti
+│   │   ├── server.py           # API server
+│   │   ├── knowledge_base.md   # KB con FAQ e politiche
+│   │   ├── test.py             # Test suite
+│   │   ├── README.md           # Guida esempio
+│   │   └── SETUP.md            # Setup Custom GPT
+│   │
+│   └── openai_claude/          # 🤖 Confronto OpenAI vs Claude
+│       ├── server.py           # API server multi-model
+│       ├── test.py             # Test suite
+│       └── README.md           # Guida esempio
+│
+├── docs/                        # 📚 Documentazione
+│   ├── QUICKSTART.md           # Setup rapido
+│   ├── DEPLOYMENT.md           # Guide deployment
+│   ├── CUSTOM_GPT_SETUP.md     # Setup Custom GPT generale
+│   └── PYTHON_README.md        # Uso client Python
+│
+├── core/                        # 🔧 Codice condiviso
+│   ├── __init__.py
+│   ├── api_client.py           # Client OpenAI/Claude
+│   └── examples.py             # Esempi d'uso
+│
+├── scripts/                     # 🛠️ Utility
+│   ├── generate_openapi_schema.py
+│   └── deploy_ngrok.sh
+│
+├── deploy/                      # ☁️ Configurazioni deployment
+│   ├── .replit
+│   ├── replit.nix
+│   ├── railway.json
+│   ├── render.yaml
+│   └── Procfile
+│
+├── .env.example                 # Template env vars
+├── requirements.txt             # Dipendenze Python
+├── .gitignore
+└── README.md
 ```
+
+---
 
 ## 🆘 Supporto
 
-Problemi comuni e soluzioni in [CUSTOM_GPT_SETUP.md](CUSTOM_GPT_SETUP.md#troubleshooting)
+Problemi comuni e soluzioni in [docs/CUSTOM_GPT_SETUP.md](docs/CUSTOM_GPT_SETUP.md#troubleshooting)
+
+---
 
 ## 📄 Licenza
 
 MIT License - Vedi [LICENSE](LICENSE)
+
+---
 
 ## 🌟 Contributi
 

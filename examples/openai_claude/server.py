@@ -8,7 +8,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from typing import Optional, Literal
 import os
-from api_client import OpenAIClient, ClaudeClient
+import sys
+from pathlib import Path
+
+# Aggiungi la directory root al path per importare core
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+from core.api_client import OpenAIClient, ClaudeClient
 
 app = FastAPI(
     title="AI API for Custom GPT",
