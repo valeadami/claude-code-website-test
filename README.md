@@ -49,12 +49,32 @@ python api_server.py
 
 ## 📚 Documentazione
 
+### Guide Generali
+
 | Documento | Descrizione |
 |-----------|-------------|
 | [QUICKSTART.md](QUICKSTART.md) | Setup rapido in 5-10 minuti |
 | [PYTHON_README.md](PYTHON_README.md) | Uso del client Python per OpenAI e Claude |
 | [CUSTOM_GPT_SETUP.md](CUSTOM_GPT_SETUP.md) | Guida completa per Custom GPT Actions |
 | [DEPLOYMENT.md](DEPLOYMENT.md) | Come fare il deploy (Ngrok, Replit, Railway, Render) |
+
+### 🛍️ Esempio Pratico: Customer Care Bot
+
+Un esempio completo di chatbot per assistenza clienti:
+
+| Documento | Descrizione |
+|-----------|-------------|
+| [CUSTOMER_CARE_README.md](CUSTOMER_CARE_README.md) | Overview esempio customer care |
+| [CUSTOMER_CARE_GPT_SETUP.md](CUSTOMER_CARE_GPT_SETUP.md) | Setup Custom GPT per customer care |
+| `customer_care_server.py` | Server API con 8 ordini mockup |
+| `customer_care_knowledge_base.md` | KB con FAQ e politiche aziendali |
+| `test_customer_care.py` | Test suite interattiva |
+
+**Quick Start Customer Care:**
+```bash
+python customer_care_server.py        # Avvia server
+python test_customer_care.py          # Testa (menu interattivo)
+```
 
 ## 🌟 Funzionalità
 
