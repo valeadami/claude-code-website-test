@@ -1,0 +1,81 @@
+{
+  "descrizione": "Oggetti che contengono altri oggetti",
+
+  "azienda": {
+    "nome": "Tech Solutions SpA",
+    "anno_fondazione": 2010,
+    "sede": {
+      "indirizzo": {
+        "via": "Via dell'Innovazione",
+        "numero": 42,
+        "città": "Milano",
+        "provincia": "MI",
+        "cap": "20100",
+        "paese": "Italia"
+      },
+      "coordinate": {
+        "latitudine": 45.4642,
+        "longitudine": 9.1900
+      },
+      "contatti": {
+        "telefono": "+39 02 1234567",
+        "fax": "+39 02 1234568",
+        "email": "info@techsolutions.it",
+        "pec": "techsolutions@pec.it"
+      }
+    },
+    "ceo": {
+      "nome": "Laura",
+      "cognome": "Bianchi",
+      "informazioni": {
+        "età": 45,
+        "nazionalità": "Italiana",
+        "email": "laura.bianchi@techsolutions.it"
+      }
+    }
+  },
+
+  "libro": {
+    "isbn": "978-3-16-148410-0",
+    "titolo": "Introduzione alla Programmazione",
+    "autore": {
+      "nome": "Marco",
+      "cognome": "Verdi",
+      "biografia": {
+        "data_nascita": "1975-03-15",
+        "nazionalità": "Italiana",
+        "educazione": {
+          "laurea": "Informatica",
+          "università": "Politecnico di Milano",
+          "anno_laurea": 1998
+        }
+      },
+      "contatti": {
+        "email": "marco.verdi@email.it",
+        "sito_web": "www.marcoverdi.it"
+      }
+    },
+    "editore": {
+      "nome": "Edizioni Tech",
+      "sede": {
+        "città": "Roma",
+        "paese": "Italia"
+      }
+    },
+    "dettagli": {
+      "pagine": 450,
+      "lingua": "Italiano",
+      "prezzo": {
+        "valore": 39.99,
+        "valuta": "EUR"
+      }
+    }
+  },
+
+  "note": [
+    "Ogni livello di annidamento aumenta la complessità",
+    "Mantieni una struttura logica e gerarchica",
+    "Evita troppi livelli di annidamento (max 3-4 livelli consigliati)",
+    "Usa indentazione consistente per leggibilità"
+  ]
+}

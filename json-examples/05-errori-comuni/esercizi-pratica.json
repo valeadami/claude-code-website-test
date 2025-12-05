@@ -1,0 +1,247 @@
+{
+  "descrizione": "Esercizi per mettere in pratica quanto appreso",
+  "nota": "Prova a creare questi esempi da solo, poi confronta con le soluzioni",
+
+  "esercizio_1": {
+    "titolo": "Crea il tuo profilo",
+    "difficoltà": "facile",
+    "istruzioni": "Crea un oggetto JSON che rappresenti il tuo profilo con: nome, cognome, età, email, città",
+    "soluzione_esempio": {
+      "nome": "Mario",
+      "cognome": "Rossi",
+      "età": 30,
+      "email": "mario.rossi@esempio.it",
+      "città": "Milano"
+    }
+  },
+
+  "esercizio_2": {
+    "titolo": "Lista della spesa",
+    "difficoltà": "facile",
+    "istruzioni": "Crea un array con almeno 5 prodotti della spesa",
+    "soluzione_esempio": [
+      "pane",
+      "latte",
+      "uova",
+      "formaggio",
+      "mele"
+    ]
+  },
+
+  "esercizio_3": {
+    "titolo": "Biblioteca personale",
+    "difficoltà": "media",
+    "istruzioni": "Crea un array di almeno 3 libri. Ogni libro deve avere: titolo, autore, anno, pagine, letto (booleano)",
+    "soluzione_esempio": [
+      {
+        "titolo": "Il Signore degli Anelli",
+        "autore": "J.R.R. Tolkien",
+        "anno": 1954,
+        "pagine": 1178,
+        "letto": true
+      },
+      {
+        "titolo": "1984",
+        "autore": "George Orwell",
+        "anno": 1949,
+        "pagine": 328,
+        "letto": true
+      },
+      {
+        "titolo": "Il Nome della Rosa",
+        "autore": "Umberto Eco",
+        "anno": 1980,
+        "pagine": 503,
+        "letto": false
+      }
+    ]
+  },
+
+  "esercizio_4": {
+    "titolo": "Contatti telefonici",
+    "difficoltà": "media",
+    "istruzioni": "Crea un oggetto rubrica con almeno 3 contatti. Ogni contatto ha: nome, telefono, email, indirizzo (oggetto con via, città, cap)",
+    "soluzione_esempio": {
+      "contatti": [
+        {
+          "nome": "Mario Rossi",
+          "telefono": "+39 123 456789",
+          "email": "mario@esempio.it",
+          "indirizzo": {
+            "via": "Via Roma 10",
+            "città": "Milano",
+            "cap": "20100"
+          }
+        },
+        {
+          "nome": "Laura Bianchi",
+          "telefono": "+39 987 654321",
+          "email": "laura@esempio.it",
+          "indirizzo": {
+            "via": "Via Verdi 25",
+            "città": "Roma",
+            "cap": "00100"
+          }
+        }
+      ]
+    }
+  },
+
+  "esercizio_5": {
+    "titolo": "Playlist musicale",
+    "difficoltà": "media",
+    "istruzioni": "Crea una playlist con: nome, descrizione, pubblica (booleano), canzoni (array di oggetti con: titolo, artista, durata_secondi, genere)",
+    "soluzione_esempio": {
+      "nome": "Le mie preferite",
+      "descrizione": "Raccolta delle canzoni che ascolto più spesso",
+      "pubblica": true,
+      "canzoni": [
+        {
+          "titolo": "Bohemian Rhapsody",
+          "artista": "Queen",
+          "durata_secondi": 354,
+          "genere": "Rock"
+        },
+        {
+          "titolo": "Imagine",
+          "artista": "John Lennon",
+          "durata_secondi": 183,
+          "genere": "Pop"
+        },
+        {
+          "titolo": "Hotel California",
+          "artista": "Eagles",
+          "durata_secondi": 391,
+          "genere": "Rock"
+        }
+      ],
+      "numero_canzoni": 3,
+      "durata_totale_secondi": 928
+    }
+  },
+
+  "esercizio_6": {
+    "titolo": "E-commerce: carrello",
+    "difficoltà": "difficile",
+    "istruzioni": "Crea un carrello con: id_utente, data_creazione, prodotti (array con: id, nome, prezzo, quantità, sconto_percentuale), subtotale, tasse, totale",
+    "soluzione_esempio": {
+      "id_carrello": "cart_abc123",
+      "id_utente": 1001,
+      "data_creazione": "2024-12-05T10:30:00Z",
+      "prodotti": [
+        {
+          "id": 101,
+          "nome": "Laptop",
+          "prezzo_unitario": 999.99,
+          "quantità": 1,
+          "sconto_percentuale": 10,
+          "prezzo_scontato": 899.99
+        },
+        {
+          "id": 102,
+          "nome": "Mouse Wireless",
+          "prezzo_unitario": 29.99,
+          "quantità": 2,
+          "sconto_percentuale": 0,
+          "prezzo_scontato": 29.99
+        }
+      ],
+      "riepilogo": {
+        "subtotale": 959.97,
+        "tasse": 211.19,
+        "spedizione": 5.99,
+        "totale": 1177.15
+      },
+      "coupon_applicato": "SCONTO10",
+      "indirizzo_spedizione": {
+        "destinatario": "Mario Rossi",
+        "via": "Via Roma 10",
+        "città": "Milano",
+        "cap": "20100",
+        "paese": "Italia"
+      }
+    }
+  },
+
+  "esercizio_7": {
+    "titolo": "Sistema di prenotazioni",
+    "difficoltà": "difficile",
+    "istruzioni": "Crea un sistema di prenotazione ristorante con: id_prenotazione, cliente (nome, telefono, email), data_ora, numero_persone, tavolo, note_speciali, menu_prescelto (array di piatti), stato",
+    "soluzione_esempio": {
+      "id_prenotazione": "RES20241205001",
+      "ristorante": {
+        "nome": "La Bella Vita",
+        "indirizzo": "Via Gastronomia 15, Milano"
+      },
+      "cliente": {
+        "id": 5001,
+        "nome": "Mario Rossi",
+        "telefono": "+39 123 456789",
+        "email": "mario@esempio.it",
+        "vip": false
+      },
+      "dettagli_prenotazione": {
+        "data": "2024-12-15",
+        "ora": "20:00",
+        "numero_persone": 4,
+        "tavolo_assegnato": "T12",
+        "area": "Non fumatori",
+        "vista": "Giardino"
+      },
+      "richieste_speciali": [
+        "Seggiolone per bambino",
+        "Allergia ai frutti di mare",
+        "Menu vegetariano per 2 persone"
+      ],
+      "menu_prescelto": [
+        {
+          "portata": "Antipasto",
+          "piatto": "Bruschette miste",
+          "quantità": 2,
+          "prezzo": 8.5
+        },
+        {
+          "portata": "Primo",
+          "piatto": "Pasta al pomodoro",
+          "quantità": 3,
+          "prezzo": 12.0
+        },
+        {
+          "portata": "Secondo",
+          "piatto": "Tagliata di manzo",
+          "quantità": 2,
+          "prezzo": 22.0
+        }
+      ],
+      "stato": "confermata",
+      "caparra_versata": true,
+      "importo_caparra": 50.0,
+      "note_interne": "Cliente abituale, preferisce tavolo tranquillo",
+      "creata_il": "2024-12-05T14:30:00Z",
+      "confermata_il": "2024-12-05T14:35:00Z"
+    }
+  },
+
+  "sfide_bonus": [
+    {
+      "titolo": "Trova e correggi errori",
+      "descrizione": "Prendi uno degli esempi nelle cartelle precedenti e introduci 5 errori di sintassi. Poi chiedi a un amico di trovarli!"
+    },
+    {
+      "titolo": "API mock",
+      "descrizione": "Crea una risposta JSON completa per un'API di social media che restituisce i post di un utente con commenti e likes"
+    },
+    {
+      "titolo": "Configurazione app",
+      "descrizione": "Crea un file di configurazione JSON per un'app mobile con: impostazioni utente, tema, notifiche, privacy, connettività"
+    }
+  ],
+
+  "suggerimenti": [
+    "Inizia sempre validando il tuo JSON su jsonlint.com",
+    "Usa un editor con syntax highlighting per JSON",
+    "Pratica copiando e modificando gli esempi nelle altre cartelle",
+    "Prova a convertire dati reali (rubrica, playlist, ecc.) in JSON",
+    "Sperimenta con le API pubbliche per vedere JSON nel mondo reale"
+  ]
+}

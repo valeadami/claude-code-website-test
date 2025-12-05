@@ -1,0 +1,139 @@
+{
+  "descrizione": "Strutture complesse che combinano oggetti e array annidati",
+
+  "università": {
+    "nome": "Università degli Studi di Milano",
+    "dipartimenti": [
+      {
+        "nome": "Informatica",
+        "corsi": [
+          {
+            "codice": "INF101",
+            "titolo": "Programmazione 1",
+            "crediti": 9,
+            "docenti": [
+              {
+                "nome": "Prof. Mario Rossi",
+                "email": "mario.rossi@unimi.it",
+                "ricevimento": {
+                  "giorni": ["Lunedì", "Mercoledì"],
+                  "orario": "14:00-16:00"
+                }
+              }
+            ],
+            "studenti_iscritti": 150,
+            "esami": [
+              {
+                "data": "2024-01-15",
+                "tipo": "Scritto",
+                "aula": "A1",
+                "voti": [28, 30, 27, 25, 29]
+              },
+              {
+                "data": "2024-02-10",
+                "tipo": "Orale",
+                "aula": "B2",
+                "voti": [29, 30, 28, 26, 30]
+              }
+            ]
+          },
+          {
+            "codice": "INF102",
+            "titolo": "Algoritmi e Strutture Dati",
+            "crediti": 12,
+            "docenti": [
+              {
+                "nome": "Prof.ssa Laura Bianchi",
+                "email": "laura.bianchi@unimi.it",
+                "ricevimento": {
+                  "giorni": ["Martedì", "Giovedì"],
+                  "orario": "15:00-17:00"
+                }
+              }
+            ],
+            "studenti_iscritti": 120
+          }
+        ]
+      },
+      {
+        "nome": "Matematica",
+        "corsi": [
+          {
+            "codice": "MAT101",
+            "titolo": "Analisi Matematica 1",
+            "crediti": 12,
+            "studenti_iscritti": 200
+          }
+        ]
+      }
+    ]
+  },
+
+  "negozio_online": {
+    "nome": "TechShop",
+    "categorie": [
+      {
+        "id": 1,
+        "nome": "Smartphone",
+        "prodotti": [
+          {
+            "id": 101,
+            "marca": "Brand A",
+            "modello": "X Pro",
+            "prezzo": 799.99,
+            "caratteristiche": {
+              "display": "6.5 pollici",
+              "memoria": ["128GB", "256GB", "512GB"],
+              "colori": ["Nero", "Bianco", "Blu"],
+              "specifiche_tecniche": {
+                "cpu": "Octa-core 2.8GHz",
+                "ram": "8GB",
+                "batteria": "4500mAh",
+                "fotocamera": {
+                  "principale": "48MP",
+                  "frontale": "12MP",
+                  "features": ["HDR", "Night Mode", "4K Video"]
+                }
+              }
+            },
+            "recensioni": [
+              {
+                "utente": "Mario123",
+                "voto": 5,
+                "testo": "Ottimo prodotto!",
+                "data": "2024-01-10"
+              },
+              {
+                "utente": "Laura456",
+                "voto": 4,
+                "testo": "Molto soddisfatta",
+                "data": "2024-01-15"
+              }
+            ],
+            "disponibilità": {
+              "in_stock": true,
+              "quantità": 50,
+              "magazzini": [
+                {
+                  "località": "Milano",
+                  "quantità": 30
+                },
+                {
+                  "località": "Roma",
+                  "quantità": 20
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "note": [
+    "Questa è una struttura molto complessa ma realistica",
+    "Combina oggetti annidati, array di oggetti, e array annidati",
+    "Tipica di risposte API complesse",
+    "Importante mantenere una struttura logica e coerente"
+  ]
+}

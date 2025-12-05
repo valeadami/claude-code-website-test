@@ -1,0 +1,150 @@
+{
+  "descrizione": "Esempio di file di configurazione per un'applicazione",
+  "note": "I file di configurazione JSON sono molto comuni nelle applicazioni moderne",
+
+  "app": {
+    "name": "MyApp",
+    "version": "2.1.0",
+    "environment": "production",
+    "debug": false,
+    "maintenance_mode": false
+  },
+
+  "server": {
+    "host": "0.0.0.0",
+    "port": 3000,
+    "protocol": "https",
+    "cors": {
+      "enabled": true,
+      "origins": [
+        "https://www.esempio.it",
+        "https://app.esempio.it"
+      ],
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "credentials": true
+    },
+    "rate_limiting": {
+      "enabled": true,
+      "max_requests": 100,
+      "window_ms": 900000,
+      "message": "Troppi tentativi, riprova più tardi"
+    }
+  },
+
+  "database": {
+    "primary": {
+      "type": "postgresql",
+      "host": "db.esempio.it",
+      "port": 5432,
+      "name": "myapp_prod",
+      "ssl": true,
+      "pool": {
+        "min": 2,
+        "max": 10,
+        "idle_timeout_ms": 30000
+      }
+    },
+    "cache": {
+      "type": "redis",
+      "host": "cache.esempio.it",
+      "port": 6379,
+      "ttl": 3600,
+      "key_prefix": "myapp:"
+    }
+  },
+
+  "authentication": {
+    "providers": ["local", "google", "github"],
+    "jwt": {
+      "expires_in": "7d",
+      "refresh_token_expires_in": "30d"
+    },
+    "password": {
+      "min_length": 8,
+      "require_uppercase": true,
+      "require_lowercase": true,
+      "require_numbers": true,
+      "require_special_chars": true
+    },
+    "session": {
+      "timeout_minutes": 60,
+      "remember_me_days": 30
+    }
+  },
+
+  "email": {
+    "provider": "smtp",
+    "from": {
+      "name": "MyApp",
+      "address": "noreply@esempio.it"
+    },
+    "smtp": {
+      "host": "smtp.esempio.it",
+      "port": 587,
+      "secure": true
+    },
+    "templates": {
+      "welcome": "templates/welcome.html",
+      "password_reset": "templates/password-reset.html",
+      "notification": "templates/notification.html"
+    }
+  },
+
+  "storage": {
+    "provider": "s3",
+    "bucket": "myapp-uploads",
+    "region": "eu-west-1",
+    "public_url": "https://cdn.esempio.it",
+    "max_file_size_mb": 10,
+    "allowed_extensions": [".jpg", ".jpeg", ".png", ".pdf", ".doc", ".docx"]
+  },
+
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "destinations": [
+      {
+        "type": "file",
+        "path": "/var/log/myapp/app.log",
+        "max_size_mb": 100,
+        "max_files": 10
+      },
+      {
+        "type": "cloudwatch",
+        "group": "/aws/myapp/production",
+        "stream": "application"
+      }
+    ]
+  },
+
+  "monitoring": {
+    "enabled": true,
+    "services": {
+      "sentry": {
+        "enabled": true,
+        "sample_rate": 1.0
+      },
+      "analytics": {
+        "enabled": true,
+        "provider": "google",
+        "anonymize_ip": true
+      }
+    }
+  },
+
+  "features": {
+    "user_registration": true,
+    "social_login": true,
+    "two_factor_auth": true,
+    "api_access": true,
+    "beta_features": false
+  },
+
+  "localization": {
+    "default_language": "it",
+    "available_languages": ["it", "en", "fr", "de", "es"],
+    "timezone": "Europe/Rome",
+    "date_format": "DD/MM/YYYY",
+    "time_format": "HH:mm"
+  }
+}

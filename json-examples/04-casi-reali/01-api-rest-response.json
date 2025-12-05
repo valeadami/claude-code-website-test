@@ -1,0 +1,80 @@
+{
+  "descrizione": "Esempio di risposta da un'API REST reale",
+  "note": "Questo è il formato tipico di una risposta GET /api/users",
+
+  "status": "success",
+  "code": 200,
+  "message": "Utenti recuperati con successo",
+  "timestamp": "2024-12-05T10:30:00Z",
+  "data": {
+    "users": [
+      {
+        "id": 1,
+        "username": "mario.rossi",
+        "email": "mario.rossi@esempio.it",
+        "first_name": "Mario",
+        "last_name": "Rossi",
+        "avatar": "https://api.esempio.it/avatars/1.jpg",
+        "role": "admin",
+        "active": true,
+        "created_at": "2023-01-15T08:00:00Z",
+        "updated_at": "2024-12-01T14:30:00Z",
+        "profile": {
+          "bio": "Sviluppatore Full Stack",
+          "location": "Milano, Italia",
+          "website": "https://mariorossi.dev",
+          "social": {
+            "twitter": "@mariorossi",
+            "github": "mariorossi",
+            "linkedin": "mario-rossi"
+          }
+        },
+        "permissions": ["read", "write", "delete", "admin"],
+        "last_login": "2024-12-05T09:15:00Z"
+      },
+      {
+        "id": 2,
+        "username": "laura.bianchi",
+        "email": "laura.bianchi@esempio.it",
+        "first_name": "Laura",
+        "last_name": "Bianchi",
+        "avatar": "https://api.esempio.it/avatars/2.jpg",
+        "role": "user",
+        "active": true,
+        "created_at": "2023-03-20T10:00:00Z",
+        "updated_at": "2024-11-28T16:45:00Z",
+        "profile": {
+          "bio": "Designer UI/UX",
+          "location": "Roma, Italia",
+          "website": null,
+          "social": {
+            "twitter": null,
+            "github": "laurabianchi",
+            "linkedin": "laura-bianchi"
+          }
+        },
+        "permissions": ["read", "write"],
+        "last_login": "2024-12-04T18:30:00Z"
+      }
+    ],
+    "pagination": {
+      "current_page": 1,
+      "total_pages": 10,
+      "per_page": 2,
+      "total_items": 20,
+      "has_next": true,
+      "has_previous": false,
+      "links": {
+        "first": "https://api.esempio.it/users?page=1",
+        "last": "https://api.esempio.it/users?page=10",
+        "next": "https://api.esempio.it/users?page=2",
+        "prev": null
+      }
+    }
+  },
+  "meta": {
+    "api_version": "v1",
+    "request_id": "req_abc123xyz",
+    "execution_time_ms": 45
+  }
+}

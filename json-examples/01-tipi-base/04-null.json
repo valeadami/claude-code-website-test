@@ -1,0 +1,41 @@
+{
+  "descrizione": "Esempi di null in JSON",
+  "nota": "null rappresenta l'assenza intenzionale di valore",
+
+  "esempi": {
+    "valore_nullo": null,
+    "secondo_nome": null,
+    "data_fine": null
+  },
+
+  "casi_uso_comuni": {
+    "nome": "Mario",
+    "secondo_nome": null,
+    "cognome": "Rossi",
+    "telefono": "+39 123 456789",
+    "telefono_secondario": null,
+    "data_nascita": "1990-01-15",
+    "data_decesso": null,
+    "immagine_profilo": "https://example.com/foto.jpg",
+    "immagine_copertina": null,
+    "azienda": "Tech Corp",
+    "sito_web": null
+  },
+
+  "differenze": {
+    "null_esempio": null,
+    "stringa_vuota_esempio": "",
+    "zero_esempio": 0,
+    "false_esempio": false,
+    "spiegazione": "Questi sono tutti valori diversi! null = nessun valore, '' = stringa vuota, 0 = numero zero, false = booleano falso"
+  },
+
+  "note_importanti": [
+    "null è sempre minuscolo",
+    "NON usare: Null, NULL, None, nil, undefined",
+    "null è diverso da stringa vuota ('')",
+    "null è diverso da 0",
+    "null è diverso da false",
+    "null indica 'valore assente' o 'non applicabile'"
+  ]
+}

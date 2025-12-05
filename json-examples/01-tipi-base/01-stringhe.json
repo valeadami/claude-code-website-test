@@ -1,0 +1,25 @@
+{
+  "descrizione": "Esempi di stringhe in JSON",
+  "nota": "Le stringhe devono sempre essere racchiuse tra virgolette doppie",
+
+  "esempi": {
+    "stringa_semplice": "Ciao mondo!",
+    "stringa_con_numeri": "L'anno è 2024",
+    "stringa_vuota": "",
+    "stringa_con_spazi": "   spazi all'inizio e alla fine   ",
+    "stringa_multilingua": "Bonjour, 你好, مرحبا",
+    "caratteri_speciali": "Uso delle virgolette \"interne\" con backslash",
+    "a_capo": "Prima riga\nSeconda riga",
+    "tab": "Colonna1\tColonna2",
+    "backslash": "Percorso Windows: C:\\Users\\Nome",
+    "unicode": "Emoji: \u2764\uFE0F",
+    "url": "https://www.esempio.it/pagina",
+    "email": "utente@dominio.com"
+  },
+
+  "note_importanti": [
+    "Usa sempre virgolette doppie (\"), non singole (')",
+    "Caratteri speciali vanno escapati con backslash (\\)",
+    "I caratteri Unicode sono supportati"
+  ]
+}

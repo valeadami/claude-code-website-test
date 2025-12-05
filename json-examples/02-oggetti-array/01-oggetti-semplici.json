@@ -1,0 +1,49 @@
+{
+  "descrizione": "Esempi di oggetti JSON semplici",
+  "nota": "Gli oggetti sono racchiusi tra graffe {} e contengono coppie chiave:valore",
+
+  "oggetto_vuoto": {},
+
+  "persona": {
+    "nome": "Mario",
+    "cognome": "Rossi",
+    "età": 30
+  },
+
+  "prodotto": {
+    "id": 101,
+    "nome": "Laptop",
+    "prezzo": 999.99,
+    "disponibile": true
+  },
+
+  "indirizzo": {
+    "via": "Via Roma",
+    "numero": 42,
+    "città": "Milano",
+    "cap": "20100",
+    "paese": "Italia"
+  },
+
+  "coordinate": {
+    "latitudine": 45.4642,
+    "longitudine": 9.1900,
+    "altitudine": 122
+  },
+
+  "configurazione": {
+    "tema": "chiaro",
+    "lingua": "it",
+    "notifiche": true,
+    "volume": 75,
+    "modalità_offline": false
+  },
+
+  "note_importanti": [
+    "Le chiavi devono essere sempre stringhe tra virgolette doppie",
+    "I valori possono essere di qualsiasi tipo JSON",
+    "Usa i due punti (:) per separare chiave e valore",
+    "Usa la virgola (,) per separare le coppie",
+    "NON mettere virgola dopo l'ultimo elemento"
+  ]
+}
