@@ -1,0 +1,82 @@
+{
+  "descrizione": "Esempio di GeoJSON - formato standard per dati geografici",
+  "note": "GeoJSON è utilizzato per rappresentare forme geometriche con coordinate",
+
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [9.1900, 45.4642]
+      },
+      "properties": {
+        "name": "Milano",
+        "type": "city",
+        "population": 1378689,
+        "country": "Italia",
+        "region": "Lombardia",
+        "description": "Capoluogo della Lombardia"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.4964, 41.9028]
+      },
+      "properties": {
+        "name": "Roma",
+        "type": "city",
+        "population": 2873494,
+        "country": "Italia",
+        "region": "Lazio",
+        "description": "Capitale d'Italia"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [9.1900, 45.4642],
+          [11.8767, 45.4064],
+          [12.4964, 41.9028]
+        ]
+      },
+      "properties": {
+        "name": "Strada Milano-Venezia-Roma",
+        "type": "route",
+        "distance_km": 650,
+        "highway": "A1/A4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [9.0, 45.0],
+            [10.0, 45.0],
+            [10.0, 46.0],
+            [9.0, 46.0],
+            [9.0, 45.0]
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Area protetta",
+        "type": "park",
+        "area_km2": 12000,
+        "protected": true
+      }
+    }
+  ],
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "descrizione": "Array che contengono altri array",
+
+  "matrice_2x3": [
+    [1, 2, 3],
+    [4, 5, 6]
+  ],
+
+  "matrice_3x3": [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ],
+
+  "calendario": [
+    ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"],
+    [1, 2, 3, 4, 5, 6, 7],
+    [8, 9, 10, 11, 12, 13, 14],
+    [15, 16, 17, 18, 19, 20, 21],
+    [22, 23, 24, 25, 26, 27, 28]
+  ],
+
+  "coordinate_multiple": [
+    [45.4642, 9.1900],
+    [41.9028, 12.4964],
+    [43.7696, 11.2558]
+  ],
+
+  "gruppi_studenti": [
+    [
+      "Mario Rossi",
+      "Laura Bianchi",
+      "Giuseppe Verdi"
+    ],
+    [
+      "Anna Neri",
+      "Paolo Gialli",
+      "Sofia Rosa"
+    ],
+    [
+      "Luca Blu",
+      "Elena Viola",
+      "Marco Grigio"
+    ]
+  ],
+
+  "vendite_trimestrali": [
+    ["Q1", [1000, 1200, 1100]],
+    ["Q2", [1300, 1400, 1350]],
+    ["Q3", [1500, 1600, 1550]],
+    ["Q4", [1800, 1900, 2000]]
+  ],
+
+  "note": [
+    "Array annidati sono utili per rappresentare matrici",
+    "Ogni sotto-array dovrebbe avere una struttura consistente",
+    "Utili per dati tabellari o coordinate",
+    "Attenzione all'indentazione per mantenere la leggibilità"
+  ]
+}

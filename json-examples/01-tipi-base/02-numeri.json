@@ -1,0 +1,34 @@
+{
+  "descrizione": "Esempi di numeri in JSON",
+  "nota": "I numeri non vanno mai messi tra virgolette",
+
+  "esempi": {
+    "intero_positivo": 42,
+    "intero_negativo": -17,
+    "zero": 0,
+    "decimale": 3.14159,
+    "decimale_negativo": -2.5,
+    "notazione_scientifica": 1.5e10,
+    "notazione_scientifica_negativa": 3.2e-5,
+    "molto_grande": 9999999999999999,
+    "molto_piccolo": 0.0000000001
+  },
+
+  "casi_speciali": {
+    "prezzo": 19.99,
+    "percentuale": 75.5,
+    "temperatura": -5,
+    "coordinate_latitudine": 45.4642,
+    "coordinate_longitudine": 9.1900,
+    "popolazione": 1000000,
+    "pi_greco": 3.141592653589793
+  },
+
+  "note_importanti": [
+    "Non usare virgolette intorno ai numeri",
+    "Non usare separatori delle migliaia (no 1,000)",
+    "Usa il punto (.) come separatore decimale, non la virgola",
+    "JSON non supporta Infinity, -Infinity o NaN",
+    "Non iniziare con 0 (es: 0123 non è valido)"
+  ]
+}

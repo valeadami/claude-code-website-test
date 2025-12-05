@@ -1,0 +1,63 @@
+{
+  "descrizione": "Riepilogo di tutti i tipi di dati base in JSON",
+
+  "tipo_stringa": "Questo è del testo",
+  "tipo_numero_intero": 42,
+  "tipo_numero_decimale": 3.14,
+  "tipo_booleano_vero": true,
+  "tipo_booleano_falso": false,
+  "tipo_null": null,
+  "tipo_oggetto": {
+    "chiave": "valore"
+  },
+  "tipo_array": [1, 2, 3],
+
+  "esempi_combinati": {
+    "utente": {
+      "id": 1001,
+      "username": "mario_rossi",
+      "email": "mario@esempio.it",
+      "età": 30,
+      "attivo": true,
+      "biografia": null,
+      "tags": ["sviluppatore", "designer"],
+      "impostazioni": {
+        "tema": "scuro",
+        "notifiche": false
+      }
+    }
+  },
+
+  "tabella_riferimento": [
+    {
+      "tipo": "String",
+      "esempio": "testo",
+      "nota": "Tra virgolette doppie"
+    },
+    {
+      "tipo": "Number",
+      "esempio": 123,
+      "nota": "Senza virgolette"
+    },
+    {
+      "tipo": "Boolean",
+      "esempio": true,
+      "nota": "true o false (minuscolo)"
+    },
+    {
+      "tipo": "null",
+      "esempio": null,
+      "nota": "Assenza di valore"
+    },
+    {
+      "tipo": "Object",
+      "esempio": {},
+      "nota": "Tra graffe {}"
+    },
+    {
+      "tipo": "Array",
+      "esempio": [],
+      "nota": "Tra parentesi quadre []"
+    }
+  ]
+}

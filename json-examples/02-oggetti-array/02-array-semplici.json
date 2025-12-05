@@ -1,0 +1,43 @@
+{
+  "descrizione": "Esempi di array JSON semplici",
+  "nota": "Gli array sono racchiusi tra parentesi quadre [] e contengono una lista di valori",
+
+  "array_vuoto": [],
+
+  "numeri": [1, 2, 3, 4, 5],
+
+  "stringhe": ["mela", "banana", "arancia", "pera"],
+
+  "booleani": [true, false, true, true],
+
+  "misto": [42, "testo", true, null],
+
+  "giorni_settimana": [
+    "Lunedì",
+    "Martedì",
+    "Mercoledì",
+    "Giovedì",
+    "Venerdì",
+    "Sabato",
+    "Domenica"
+  ],
+
+  "temperature": [-5, 0, 10, 15, 20, 25, 30],
+
+  "colori_hex": ["#FF0000", "#00FF00", "#0000FF", "#FFFF00"],
+
+  "note_importanti": [
+    "Gli array possono contenere valori di qualsiasi tipo",
+    "Gli elementi sono separati da virgole",
+    "NON mettere virgola dopo l'ultimo elemento",
+    "Gli array mantengono l'ordine degli elementi",
+    "Un array può contenere tipi misti (ma non è una best practice)"
+  ],
+
+  "casi_uso_comuni": {
+    "lista_spesa": ["pane", "latte", "uova", "formaggio"],
+    "anni": [2020, 2021, 2022, 2023, 2024],
+    "prezzi": [9.99, 19.99, 29.99, 49.99],
+    "stati": [true, true, false, true, false]
+  }
+}

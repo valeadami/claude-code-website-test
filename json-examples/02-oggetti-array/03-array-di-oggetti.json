@@ -1,0 +1,70 @@
+{
+  "descrizione": "Array che contengono oggetti - molto comune nelle API",
+
+  "utenti": [
+    {
+      "id": 1,
+      "nome": "Mario Rossi",
+      "email": "mario@esempio.it"
+    },
+    {
+      "id": 2,
+      "nome": "Laura Bianchi",
+      "email": "laura@esempio.it"
+    },
+    {
+      "id": 3,
+      "nome": "Giuseppe Verdi",
+      "email": "giuseppe@esempio.it"
+    }
+  ],
+
+  "prodotti": [
+    {
+      "codice": "A001",
+      "nome": "Smartphone",
+      "prezzo": 599.99,
+      "stock": 15
+    },
+    {
+      "codice": "A002",
+      "nome": "Tablet",
+      "prezzo": 399.99,
+      "stock": 8
+    },
+    {
+      "codice": "A003",
+      "nome": "Laptop",
+      "prezzo": 999.99,
+      "stock": 3
+    }
+  ],
+
+  "eventi": [
+    {
+      "data": "2024-01-15",
+      "titolo": "Conferenza Tech",
+      "partecipanti": 150,
+      "online": false
+    },
+    {
+      "data": "2024-02-20",
+      "titolo": "Workshop JavaScript",
+      "partecipanti": 30,
+      "online": true
+    },
+    {
+      "data": "2024-03-10",
+      "titolo": "Hackathon",
+      "partecipanti": 75,
+      "online": false
+    }
+  ],
+
+  "note": [
+    "Questo è il pattern più comune nelle API REST",
+    "Ogni oggetto nell'array ha la stessa struttura (schema)",
+    "Ideale per rappresentare liste di entità simili",
+    "Facile da iterare e processare nei linguaggi di programmazione"
+  ]
+}

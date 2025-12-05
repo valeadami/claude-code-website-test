@@ -1,0 +1,59 @@
+{
+  "descrizione": "Oggetti che contengono array come proprietà",
+
+  "studente": {
+    "nome": "Alice Verdi",
+    "età": 22,
+    "corso": "Informatica",
+    "voti": [28, 30, 27, 29, 30],
+    "materie": ["Matematica", "Fisica", "Programmazione", "Database"],
+    "lingue": ["Italiano", "Inglese", "Spagnolo"]
+  },
+
+  "negozio": {
+    "nome": "TechStore",
+    "indirizzo": "Via Milano 10",
+    "telefono": "+39 02 1234567",
+    "categorie": ["Elettronica", "Informatica", "Accessori"],
+    "orari_apertura": ["9:00-13:00", "15:00-19:30"],
+    "giorni_chiusura": ["Domenica"],
+    "metodi_pagamento": ["Contanti", "Carta", "PayPal", "Bonifico"]
+  },
+
+  "ricetta": {
+    "nome": "Pasta al pomodoro",
+    "difficoltà": "Facile",
+    "tempo_preparazione": 30,
+    "porzioni": 4,
+    "ingredienti": [
+      "400g pasta",
+      "500g pomodori",
+      "2 spicchi aglio",
+      "Basilico",
+      "Olio extravergine",
+      "Sale"
+    ],
+    "passaggi": [
+      "Bollire l'acqua per la pasta",
+      "Preparare il sugo con pomodori e aglio",
+      "Cuocere la pasta",
+      "Condire e servire"
+    ],
+    "tags": ["italiana", "veloce", "vegetariana"]
+  },
+
+  "film": {
+    "titolo": "Il Grande Cinema",
+    "anno": 2023,
+    "durata": 142,
+    "regista": "Marco Bianchi",
+    "generi": ["Drammatico", "Thriller"],
+    "attori_principali": [
+      "Attore Uno",
+      "Attrice Due",
+      "Attore Tre"
+    ],
+    "lingue": ["Italiano", "Inglese"],
+    "premi": ["Oscar", "Golden Globe", "David di Donatello"]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "descrizione": "Esempi di valori booleani in JSON",
+  "nota": "I booleani sono solo true o false (minuscolo, senza virgolette)",
+
+  "esempi": {
+    "vero": true,
+    "falso": false
+  },
+
+  "casi_uso_comuni": {
+    "utente_attivo": true,
+    "email_verificata": false,
+    "accetta_termini": true,
+    "ha_abbonamento_premium": false,
+    "notifiche_abilitate": true,
+    "modalita_scura": false,
+    "mostra_tutorial": true,
+    "account_bloccato": false
+  },
+
+  "confronto_stringhe": {
+    "booleano_corretto": true,
+    "stringa_sbagliata": "true",
+    "nota": "Il primo è un booleano, il secondo è una stringa!"
+  },
+
+  "note_importanti": [
+    "Usa solo 'true' o 'false' in minuscolo",
+    "NON usare: True, TRUE, False, FALSE",
+    "NON mettere virgolette: 'true' e 'false' sono stringhe!",
+    "NON usare 1 o 0 al posto di true/false",
+    "I booleani sono case-sensitive (devono essere minuscoli)"
+  ]
+}
